@@ -1,0 +1,36 @@
+<!-- <p>table works!</p> -->
+
+
+<div style="width: 50%; margin: 40px auto;">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Status</th>
+        </tr>
+
+        <tr *ngFor="let user of users">
+            <td>{{user?.name}}</td>
+            <td>{{user?.email}}</td>
+            <td>
+                <span *ngIf="user?.dob else NODOB">
+                    {{user.dob | calculateAge}}
+                </span>
+
+                <ng-template #NODOB>
+
+                    <span>-</span>
+                </ng-template>
+            </td>
+
+            <td >
+                
+                <span appStatus  [status]="user.status">
+                    {{user.status}}
+                </span>
+               </td>
+        
+        </tr>
+    </table>
+</div>

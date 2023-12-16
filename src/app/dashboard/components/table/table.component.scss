@@ -1,0 +1,38 @@
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .column {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-right: 10px;
+  }
+
+  .column:last-child {
+    margin-right: 0;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
